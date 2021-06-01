@@ -19,7 +19,13 @@ namespace MyFirstAzureWebApp.Pages
 
         public void OnGet()
         {
-
+            var clientId = this.HttpContext.Request.Query["clientId"];
+            var clientSecret = this.HttpContext.Request.Query["clientSecret"];
+            var username = this.HttpContext.Request.Query["username"];
+            var extension = this.HttpContext.Request.Query["extension"];
+            var password = this.HttpContext.Request.Query["password"];
+            var to = this.HttpContext.Request.Query["to"];
+            Console.WriteLine(clientId + "" + clientSecret + "" + username + "" + extension + "" + password + "" + to);
         }
     }
 }
